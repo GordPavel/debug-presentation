@@ -12,13 +12,11 @@ public class HoneyPlant {
     }
 
     public double retrieveNectar(double nectar) {
-        if (nectar == 0) {
+        double leftNectarCapacity = nectarCapacity - nectar;
+        if (leftNectarCapacity <= 0) {
             return 0;
         }
-        nectarCapacity -= nectar;
-        if (nectarCapacity < 0) {
-            throw new RuntimeException("there is not enough nectar in this flower");
-        }
+        nectarCapacity = leftNectarCapacity;
         return nectar;
     }
 }
