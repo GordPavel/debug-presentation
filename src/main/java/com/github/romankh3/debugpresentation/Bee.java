@@ -1,13 +1,9 @@
 package com.github.romankh3.debugpresentation;
 
-import java.time.LocalDate;
 import java.util.List;
 import lombok.Data;
 
-/**
- * Class represents bee in programmatically way.
- */
-@Data
+
 public class Bee {
 
     /**
@@ -24,7 +20,7 @@ public class Bee {
         double fetchCountPerTime = 1.0;
         while (nectarCapacity < maxNectarCapacity) {
             double retrievedNectar = honeyPlant.retrieveNectar(fetchCountPerTime);
-            if(retrievedNectar == 0) {
+            if (retrievedNectar == 0) {
                 return;
             }
             nectarCapacity += retrievedNectar;
